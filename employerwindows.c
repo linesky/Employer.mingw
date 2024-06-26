@@ -21,8 +21,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     wc.lpfnWndProc = WindowProc;
     wc.hInstance = hInstance;
     wc.lpszClassName = CLASS_NAME;
-    wc.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-
+    
+    wc.hbrBackground = CreateSolidBrush(RGB(255, 255, 0));
     RegisterClass(&wc);
 
     HWND hwnd = CreateWindowEx(
